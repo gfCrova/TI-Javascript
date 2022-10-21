@@ -12,8 +12,6 @@ const cambiarModo = () => {
 
     let cardJunior = document.body.querySelector('.jr')
     cardJunior.classList.toggle('cardJr');
-
-    let
 }
 
 // TEXTO VALOR DE TICKET
