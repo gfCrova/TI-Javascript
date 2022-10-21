@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark bg-gradient p-2 fixed-top">
+        <div class="container-fluid ms-5 pe-5">
+            <a class="CaC navbar-brand fw-bold fs-3" href="#">
+                Conf Bs As
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#" class="btn fw-bold btn-close-white border-0" aria-current="page">La
+                            conferencia</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="btn fw-bold text-secondary border-0">Los oradores</a></li>
+                    <li class="nav-item"><a href="#" class="btn fw-bold text-secondary border-0">El lugar y la fecha</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="btn fw-bold text-secondary border-0">Conviértete en
+                            orador</a></li>
+                    <li class="nav-item"><a href="#" class="btn fw-bold text-success border-0">Comprar tickets</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container pt-5 mt-5">
+
+        <div class="fixed-top py-3">
+            <img id="claroOscuro" src="assets/img/luna.png" onclick="cambiarModo()" alt="icon" width="45px">
+        </div>
+
+        <div class="container cards text-center">
+            <div class="row filas gap-2">
+                <div class="col-sm columns">
+                    <div class="card est rounded-0 border-3 border-primary shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title pt-1">Estudiante</h5>
+                            <p class="card-text pt-2">Tienen un descuento</p>
+                            <h6 class="fw-bold">80%</h6>
+                            <p class="text-secondary pt-1"><em>*presentar documentación</em></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm columns">
+                    <div class="card tra rounded-0 border-3 border-success shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title p-1">Trainee</h5>
+                            <p class="card-text pt-1">Tienen un descuento</p>
+                            <h6 class="fw-bold">50%</h6>
+                            <p class="text-secondary pt-1"><em>*presentar documentación</em></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm columns">
+                    <div class="card jr rounded-0 border-3 border-warning shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title p-1">Junior</h5>
+                            <p class="card-text pt-1">Tienen un descuento</p>
+                            <h6 class="fw-bold">15%</h6>
+                            <p class="text-secondary pt-1"><em>*presentar documentación</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="titleForm text-center mt-2">
+            <p class="mb-0 pb-1 pt-3">VENTA</p>
+            <h1 id="textTicket" class="pb-4"></h1>
+        </div>
+
+        <div class="container containerForm">
+            <form action="#" class="form-group">
+                <div class="d-flex gap-3">
+                    <input type="text" id="name" placeholder="Nombre" class="form-control fs-5">
+                    <input type="text" id="apellido" placeholder="Apellido" class="form-control fs-5">
+                </div>
+                <div class="pt-4 ">
+                    <input type="email" id="email" placeholder="Correo" aria-placeholder="Nombre" class="form-control fs-5">
+                </div>
+                <div class="d-flex gap-3 mt-4 fs-5">
+                    <div class="w-100 p-0">
+                        <label for="cantidad" class="form-label">Cantidad</label>
+                        <input type="number" id="cantidad" value="" class="form-control" required>
+                    </div>
+                    <div class="w-100 p-0">
+                        <label for="categoria" class="form-label">Categoría</label>
+                        <select class="form-select" id="categoria">
+                            <option value="Ninguna" selected>Ninguna</option>
+                            <option value="Estudiante">Estudiante</option>
+                            <option value="Trainee">Trainee</option>
+                            <option value="Junior">Junior</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="alert alert-primary mt-4 p-2" role="alert">
+                    <p class="fs-5 m-auto p-2" id="txtPagar">Total a pagar: $</p>
+                </div>
+                <div class="d-flex p-0 gap-3 mt-4">
+                    <button id="delete" class="boton btn text-light fs-4 w-100" type="submit" onclick="borrarFunc()">Borrar</button>
+                    <button id="resumen" class="boton text-light btn fs-4 w-100" type="submit" onclick="resumenFunc()">Resumen</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="container-fluid py-5 mt-4">
+        <ul class="d-flex m-0 p-0 text-light list-unstyled justify-content-around">
+            <li><a class="text-light text-decoration-none" href="#">Preguntas frecuntes</a></li>
+            <li><a class="text-light text-decoration-none" href="#">Contáctanos</a></li>
+            <li><a class="text-light text-decoration-none" href="#">Prensa</a></li>
+            <li><a class="text-light text-decoration-none" href="#">Conferencias</a></li>
+            <li><a class="text-light text-decoration-none" href="#">Términos y condiciones</a></li>
+            <li><a class="text-light text-decoration-none" href="#">Privacidad</a></li>
+            <li><a class="text-light text-decoration-none" href="#">Estudiantes</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+    <script type="text/javascript" src="/src/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
