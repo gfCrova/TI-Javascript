@@ -1,16 +1,16 @@
 
-$card1: #0d6dfd65;
+$card1: #1f77fa9a;
 $card2: #07860d67;
 $card3: #ffd00059;
 $boton: #95c842;
 $botonHover: rgb(195, 250, 92);
 $bgColorFooter: linear-gradient(45deg, #112936, #1a3f53, #265c79);
-$bgColorOscuro: linear-gradient(0deg, #1f1f1f, #000000, #000000, #1f1f1f);
-
+$bgColorOscuro: linear-gradient(0deg, #1a1a1a, #000000, #000000, #1f1f1f);
+$bgColorFormOscuro: linear-gradient(0deg, #111111, #1f1f1f, #727272, #afadad, #727272, #000000);
 
 body {
     height: 100%;
-
+    transition: all 2s;
     .navbar {
 
         .navbar-brand:hover {
@@ -24,7 +24,7 @@ body {
     }
 
     main {
-
+        transition: all 2s;
         #claroOscuro {
             cursor: pointer;
             position: absolute;
@@ -76,16 +76,45 @@ body {
 
 .oscuro{ 
     background: $bgColorOscuro;
+    transition: all 2s;
 
     main {
         .titleForm {
             color: #f1eded;
+            transition: all 2s;
         }
 
         .containerForm {
-            background-color: #727272;
-            padding: 1rem;
+            background: $bgColorFormOscuro;
             border-radius: 0.5rem;
+            transition: all 2s;
+
+            form {
+                input {
+                    box-shadow: 0 0 3px #000000;
+                    transition: all 2s;
+                }
+
+                select {
+                    box-shadow: 0 0 3px #000000;
+                    transition: all 2s;
+                }
+            }
+        }
+        .cards {
+            transition: all 2s;
+            .cardEst {
+                background-color: $card1;
+                transition: all 0.8s;
+            }
+            .cardTra {
+                background-color: $card2;
+                transition: all 2.1s;
+            }
+            .cardJr {
+                background-color: $card3;
+                transition: all 3.5s;
+            }
         }
     }
 }
@@ -99,12 +128,4 @@ body {
     }
 }
 
-.cardEst {
-    background-color: $card1;
-}
-.cardTra {
-    background-color: $card2;
-}
-.cardJr {
-    background-color: $card3;
-}
+

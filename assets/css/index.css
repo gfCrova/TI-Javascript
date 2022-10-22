@@ -1,5 +1,6 @@
 body {
   height: 100%;
+  transition: all 2s;
 }
 body .navbar .navbar-brand:hover {
   transform: scale(1.1);
@@ -8,6 +9,9 @@ body .navbar .navbar-brand:hover {
 body .navbar .nav-item:hover {
   transform: scale(1.1);
   transition: 0.4s;
+}
+body main {
+  transition: all 2s;
 }
 body main #claroOscuro {
   cursor: pointer;
@@ -22,7 +26,7 @@ body main .cards .filas .columns .card .card-body {
   color: black !important;
 }
 body main .cards .filas .columns .est:hover {
-  background-color: rgba(13, 109, 253, 0.3960784314);
+  background-color: rgba(31, 119, 250, 0.6039215686);
 }
 body main .cards .filas .columns .tra:hover {
   background-color: rgba(7, 134, 13, 0.4039215686);
@@ -42,15 +46,40 @@ body footer ul li a:hover {
 }
 
 .oscuro {
-  background: linear-gradient(0deg, #1f1f1f, #000000, #000000, #1f1f1f);
+  background: linear-gradient(0deg, #1a1a1a, #000000, #000000, #1f1f1f);
+  transition: all 2s;
 }
 .oscuro main .titleForm {
   color: #f1eded;
+  transition: all 2s;
 }
 .oscuro main .containerForm {
-  background-color: #727272;
-  padding: 1rem;
+  background: linear-gradient(0deg, #111111, #1f1f1f, #727272, #afadad, #727272, #000000);
   border-radius: 0.5rem;
+  transition: all 2s;
+}
+.oscuro main .containerForm form input {
+  box-shadow: 0 0 3px #000000;
+  transition: all 2s;
+}
+.oscuro main .containerForm form select {
+  box-shadow: 0 0 3px #000000;
+  transition: all 2s;
+}
+.oscuro main .cards {
+  transition: all 2s;
+}
+.oscuro main .cards .cardEst {
+  background-color: rgba(31, 119, 250, 0.6039215686);
+  transition: all 0.8s;
+}
+.oscuro main .cards .cardTra {
+  background-color: rgba(7, 134, 13, 0.4039215686);
+  transition: all 2.1s;
+}
+.oscuro main .cards .cardJr {
+  background-color: rgba(255, 208, 0, 0.3490196078);
+  transition: all 3.5s;
 }
 
 .boton {
@@ -59,18 +88,6 @@ body footer ul li a:hover {
 .boton:hover {
   opacity: 0.7;
   color: black !important;
-}
-
-.cardEst {
-  background-color: rgba(13, 109, 253, 0.3960784314);
-}
-
-.cardTra {
-  background-color: rgba(7, 134, 13, 0.4039215686);
-}
-
-.cardJr {
-  background-color: rgba(255, 208, 0, 0.3490196078);
 }
 
 @media (max-width: 768px) {
