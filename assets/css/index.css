@@ -15,12 +15,14 @@ body main {
 }
 body main #claroOscuro {
   display: none;
+  transition: all 4s;
 }
 body main #claroOscuro2 {
   cursor: pointer;
   position: absolute;
   top: 97px;
   right: 33px;
+  transition: all 4s;
 }
 body main #claroOscuro2:hover {
   transform: scale(1.2);
@@ -103,7 +105,10 @@ body footer ul li a:hover {
 }
 
 .oscuro {
-  background: linear-gradient(25deg, #1a1a1a, #000000, #03060f, #0e0d0d, #000000);
+  background: linear-gradient(25deg, #000000, #000000, #000000, #1a1a1a);
+  animation: delay 0.5s normal linear;
+}
+.oscuro main {
   transition: all 2s;
 }
 .oscuro main #claroOscuro {
@@ -112,12 +117,14 @@ body footer ul li a:hover {
   position: absolute;
   top: 100px;
   right: 30px;
+  transition: all 4s;
 }
 .oscuro main #claroOscuro:hover {
   transform: scale(1.2);
 }
 .oscuro main #claroOscuro2 {
   display: none;
+  transition: all 4s;
 }
 .oscuro main .titleForm {
   color: #f1eded;
@@ -132,11 +139,11 @@ body footer ul li a:hover {
   transition: all 2s;
 }
 .oscuro main .containerForm form input {
-  box-shadow: 0 0 20px #363636;
+  box-shadow: 0 0 20px #777777;
   transition: all 2s;
 }
 .oscuro main .containerForm form select {
-  box-shadow: 0 0 20px #363636;
+  box-shadow: 0 0 20px #777777;
   transition: all 2s;
 }
 .oscuro main .cards {
@@ -155,6 +162,29 @@ body footer ul li a:hover {
   transition: all 3.5s;
 }
 
+@keyframes delay {
+  0% {
+    background: white;
+  }
+  15% {
+    background: #575757;
+  }
+  25% {
+    background: #464646;
+  }
+  50% {
+    background: #2b2b2b;
+  }
+  75% {
+    background: #202020;
+  }
+  85% {
+    background: #181818;
+  }
+  100% {
+    background: #0c0c0c;
+  }
+}
 @media (max-width: 768px) {
   footer ul {
     display: flex;
