@@ -44,6 +44,7 @@ body {
             position: absolute;
             top: 97px;
             right: 33px;
+            transition: all 2s;
 
             &:hover {
                 transform: scale(1.2);
@@ -167,6 +168,7 @@ body {
             position: absolute;
             top: 100px;
             right: 30px;
+            transition: all 2s;
 
             &:hover {
                 transform: scale(1.2);
