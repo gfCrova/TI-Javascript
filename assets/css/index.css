@@ -22,23 +22,72 @@ body main #claroOscuro {
 body main #claroOscuro:hover {
   transform: scale(1.2);
 }
+body main .cards {
+  text-align: center;
+}
+body main .cards .filas .columns .card {
+  border: 0.1rem solid;
+}
 body main .cards .filas .columns .card .card-body {
   color: black !important;
 }
 body main .cards .filas .columns .est:hover {
   background-color: rgba(31, 119, 250, 0.6039215686);
+  box-shadow: 0 0 5px rgb(107, 107, 107);
 }
 body main .cards .filas .columns .tra:hover {
   background-color: rgba(7, 134, 13, 0.4039215686);
+  box-shadow: 0 0 5px rgb(107, 107, 107);
 }
 body main .cards .filas .columns .jr:hover {
   background-color: rgba(255, 208, 0, 0.3490196078);
+  box-shadow: 0 0 5px rgb(107, 107, 107);
+}
+body main .titleForm {
+  text-align: center;
+  margin-top: 1.8rem;
+}
+body main .titleForm p {
+  padding-bottom: 0;
+  margin-bottom: 0.5rem;
+  padding-top: 1rem;
+}
+body main .titleForm h1 {
+  padding-bottom: 2rem;
 }
 body main .containerForm {
-  padding: 1rem;
+  padding: auto;
+}
+body main .containerForm form .alert {
+  margin-top: 2rem;
+  padding: 0.7rem;
+}
+body main .containerForm form .alert p {
+  margin: auto;
+  font-size: 1.3rem;
+  padding: 0.7rem;
+}
+body main .containerForm form .buttons {
+  padding: 0;
+  margin-top: 1rem;
+}
+body main .containerForm form .buttons .boton {
+  font-size: 1.4rem;
+  color: #fff;
 }
 body footer {
   background: linear-gradient(45deg, #112936, #1a3f53, #265c79) !important;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+body footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body footer ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 body footer ul li a:hover {
   color: rgb(195, 250, 92) !important;
@@ -46,7 +95,7 @@ body footer ul li a:hover {
 }
 
 .oscuro {
-  background: linear-gradient(0deg, #1a1a1a, #000000, #000000, #1f1f1f);
+  background: linear-gradient(25deg, #1a1a1a, #000000, #00040f, #1f1f1f);
   transition: all 2s;
 }
 .oscuro main .titleForm {
@@ -54,16 +103,19 @@ body footer ul li a:hover {
   transition: all 2s;
 }
 .oscuro main .containerForm {
-  background: linear-gradient(0deg, #111111, #1f1f1f, #727272, #afadad, #727272, #000000);
   border-radius: 0.5rem;
   transition: all 2s;
 }
+.oscuro main .containerForm form label {
+  color: #fff;
+  transition: all 2s;
+}
 .oscuro main .containerForm form input {
-  box-shadow: 0 0 3px #000000;
+  box-shadow: 0 0 20px #363636;
   transition: all 2s;
 }
 .oscuro main .containerForm form select {
-  box-shadow: 0 0 3px #000000;
+  box-shadow: 0 0 20px #363636;
   transition: all 2s;
 }
 .oscuro main .cards {
@@ -72,14 +124,17 @@ body footer ul li a:hover {
 .oscuro main .cards .cardEst {
   background-color: rgba(31, 119, 250, 0.6039215686);
   transition: all 0.8s;
+  border: none;
 }
 .oscuro main .cards .cardTra {
   background-color: rgba(7, 134, 13, 0.4039215686);
   transition: all 2.1s;
+  border: none;
 }
 .oscuro main .cards .cardJr {
   background-color: rgba(255, 208, 0, 0.3490196078);
   transition: all 3.5s;
+  border: none;
 }
 
 .boton {

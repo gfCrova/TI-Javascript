@@ -1,119 +1,200 @@
-
 $card1: #1f77fa9a;
 $card2: #07860d67;
 $card3: #ffd00059;
 $boton: #95c842;
 $botonHover: rgb(195, 250, 92);
 $bgColorFooter: linear-gradient(45deg, #112936, #1a3f53, #265c79);
-$bgColorOscuro: linear-gradient(0deg, #1a1a1a, #000000, #000000, #1f1f1f);
-$bgColorFormOscuro: linear-gradient(0deg, #111111, #1f1f1f, #727272, #afadad, #727272, #000000);
+$bgColorOscuro: linear-gradient(25deg, #1a1a1a, #000000, #00040f, #1f1f1f);
+
+@mixin inputs {
+    box-shadow: 0 0 20px #363636;
+    transition: all 2s;
+}
 
 body {
     height: 100%;
     transition: all 2s;
+
     .navbar {
 
-        .navbar-brand:hover {
-            transform: scale(1.1);
-            transition: 0.4s;
+        .navbar-brand {
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.4s;
+            }
         }
-        .nav-item:hover {
-            transform: scale(1.1);
-            transition: 0.4s;
+
+        .nav-item {
+            &:hover {
+                transform: scale(1.1);
+                transition: 0.4s;
+            }
         }
     }
 
     main {
         transition: all 2s;
+
         #claroOscuro {
             cursor: pointer;
             position: absolute;
             top: 100px;
             right: 30px;
+
             &:hover {
                 transform: scale(1.2);
             }
         }
-        
+
         .cards {
+            text-align: center;
+
             .filas {
                 .columns {
                     .card {
+                        border: 0.1rem solid;
+
                         .card-body {
                             color: black !important;
                         }
                     }
+
                     .est:hover {
                         background-color: $card1;
+                        box-shadow: 0 0 5px rgb(107, 107, 107);
                     }
+
                     .tra:hover {
                         background-color: $card2;
+                        box-shadow: 0 0 5px rgb(107, 107, 107);
                     }
+
                     .jr:hover {
                         background-color: $card3;
+                        box-shadow: 0 0 5px rgb(107, 107, 107);
                     }
                 }
             }
         }
+
+        .titleForm {
+            text-align: center;
+            margin-top: 1.8rem;
+
+            p {
+                padding-bottom: 0;
+                margin-bottom: 0.5rem;
+                padding-top: 1rem;
+            }
+
+            h1 {
+                padding-bottom: 2rem;
+            }
+        }
+
         .containerForm {
-            padding: 1rem;
+            padding: auto;
+
+            form {
+                .alert {
+                    margin-top: 2rem;
+                    padding: 0.7rem;
+
+                    p {
+                        margin: auto;
+                        font-size: 1.3rem;
+                        padding: 0.7rem;
+                    }
+                }
+
+                .buttons {
+                    padding: 0;
+                    margin-top: 1rem;
+
+                    .boton {
+                        font-size: 1.4rem;
+                        color: #fff;
+                    }
+                }
+            }
         }
     }
 
     footer {
         background: $bgColorFooter !important;
+        padding: 2rem 0;
+        margin-top: 2rem;
 
         ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
             li {
-                a:hover {
-                    color: $botonHover !important;
-                    transition: all 0.2s;
+                a {
+                    color: #fff;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $botonHover !important;
+                        transition: all 0.2s;
+                    }
                 }
             }
         }
     }
 }
 
-.oscuro{ 
+.oscuro {
     background: $bgColorOscuro;
     transition: all 2s;
 
     main {
+
         .titleForm {
             color: #f1eded;
             transition: all 2s;
         }
 
         .containerForm {
-            background: $bgColorFormOscuro;
             border-radius: 0.5rem;
             transition: all 2s;
 
             form {
-                input {
-                    box-shadow: 0 0 3px #000000;
+                label {
+                    color: #fff;
                     transition: all 2s;
                 }
 
+                input {
+                    @include inputs();
+                }
+
                 select {
-                    box-shadow: 0 0 3px #000000;
-                    transition: all 2s;
+                    @include inputs();
                 }
             }
         }
+
         .cards {
             transition: all 2s;
+
             .cardEst {
                 background-color: $card1;
                 transition: all 0.8s;
+                border: none;
             }
+
             .cardTra {
                 background-color: $card2;
                 transition: all 2.1s;
+                border: none;
             }
+
             .cardJr {
                 background-color: $card3;
                 transition: all 3.5s;
+                border: none;
             }
         }
     }
@@ -124,8 +205,6 @@ body {
 
     &:hover {
         opacity: 0.7;
-        color:black !important;
+        color: black !important;
     }
 }
-
-
