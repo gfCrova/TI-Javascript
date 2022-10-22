@@ -4,7 +4,7 @@ $card3: #ffd00059;
 $boton: #95c842;
 $botonHover: rgb(195, 250, 92);
 $bgColorFooter: linear-gradient(45deg, #112936, #1a3f53, #265c79);
-$bgColorOscuro: linear-gradient(25deg, #1a1a1a, #000000, #00040f, #1f1f1f);
+$bgColorOscuro: linear-gradient(25deg, #1a1a1a, #000000, #03060f, #0e0d0d, #000000);
 
 @mixin inputs {
     box-shadow: 0 0 20px #363636;
@@ -36,10 +36,14 @@ body {
         transition: all 2s;
 
         #claroOscuro {
+            display: none;
+        }
+
+        #claroOscuro2 {
             cursor: pointer;
             position: absolute;
-            top: 100px;
-            right: 30px;
+            top: 97px;
+            right: 33px;
 
             &:hover {
                 transform: scale(1.2);
@@ -114,6 +118,12 @@ body {
                     .boton {
                         font-size: 1.4rem;
                         color: #fff;
+                        background-color: $boton !important;
+
+                        &:hover {
+                            opacity: 0.7;
+                            color: black !important;
+                        }
                     }
                 }
             }
@@ -151,6 +161,22 @@ body {
 
     main {
 
+        #claroOscuro {
+            display: block;
+            cursor: pointer;
+            position: absolute;
+            top: 100px;
+            right: 30px;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        #claroOscuro2 {
+            display: none;
+        }
+
         .titleForm {
             color: #f1eded;
             transition: all 2s;
@@ -179,32 +205,20 @@ body {
         .cards {
             transition: all 2s;
 
-            .cardEst {
+            .est {
                 background-color: $card1;
                 transition: all 0.8s;
-                border: none;
             }
 
-            .cardTra {
+            .tra {
                 background-color: $card2;
                 transition: all 2.1s;
-                border: none;
             }
 
-            .cardJr {
+            .jr {
                 background-color: $card3;
                 transition: all 3.5s;
-                border: none;
             }
         }
-    }
-}
-
-.boton {
-    background-color: $boton !important;
-
-    &:hover {
-        opacity: 0.7;
-        color: black !important;
     }
 }

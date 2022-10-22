@@ -14,12 +14,15 @@ body main {
   transition: all 2s;
 }
 body main #claroOscuro {
+  display: none;
+}
+body main #claroOscuro2 {
   cursor: pointer;
   position: absolute;
-  top: 100px;
-  right: 30px;
+  top: 97px;
+  right: 33px;
 }
-body main #claroOscuro:hover {
+body main #claroOscuro2:hover {
   transform: scale(1.2);
 }
 body main .cards {
@@ -74,6 +77,11 @@ body main .containerForm form .buttons {
 body main .containerForm form .buttons .boton {
   font-size: 1.4rem;
   color: #fff;
+  background-color: #95c842 !important;
+}
+body main .containerForm form .buttons .boton:hover {
+  opacity: 0.7;
+  color: black !important;
 }
 body footer {
   background: linear-gradient(45deg, #112936, #1a3f53, #265c79) !important;
@@ -95,8 +103,21 @@ body footer ul li a:hover {
 }
 
 .oscuro {
-  background: linear-gradient(25deg, #1a1a1a, #000000, #00040f, #1f1f1f);
+  background: linear-gradient(25deg, #1a1a1a, #000000, #03060f, #0e0d0d, #000000);
   transition: all 2s;
+}
+.oscuro main #claroOscuro {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 100px;
+  right: 30px;
+}
+.oscuro main #claroOscuro:hover {
+  transform: scale(1.2);
+}
+.oscuro main #claroOscuro2 {
+  display: none;
 }
 .oscuro main .titleForm {
   color: #f1eded;
@@ -121,28 +142,17 @@ body footer ul li a:hover {
 .oscuro main .cards {
   transition: all 2s;
 }
-.oscuro main .cards .cardEst {
+.oscuro main .cards .est {
   background-color: rgba(31, 119, 250, 0.6039215686);
   transition: all 0.8s;
-  border: none;
 }
-.oscuro main .cards .cardTra {
+.oscuro main .cards .tra {
   background-color: rgba(7, 134, 13, 0.4039215686);
   transition: all 2.1s;
-  border: none;
 }
-.oscuro main .cards .cardJr {
+.oscuro main .cards .jr {
   background-color: rgba(255, 208, 0, 0.3490196078);
   transition: all 3.5s;
-  border: none;
-}
-
-.boton {
-  background-color: #95c842 !important;
-}
-.boton:hover {
-  opacity: 0.7;
-  color: black !important;
 }
 
 @media (max-width: 768px) {
