@@ -42,31 +42,32 @@ body main .cards .filas .columns .card .card-body {
 body main .cards .filas .columns .card .card-body .card-title {
   padding: 5px;
 }
-body main .cards .filas .columns .card .card-body h5, body main .cards .filas .columns .card .card-body h6 {
+body main .cards .filas .columns .card .card-body h5,
+body main .cards .filas .columns .card .card-body h6 {
   font-weight: bold;
 }
 body main .cards .filas .columns .card .card-body p {
   color: rgb(94, 94, 94);
   padding-top: 5px;
 }
-body main .cards .filas .columns .est {
-  border: 2px solid #1f77fa;
+body main .cards .filas .columns .card-1 {
+  border: 0.2rem groove rgba(31, 119, 250, 0.5568627451);
 }
-body main .cards .filas .columns .est:hover {
+body main .cards .filas .columns .card-1:hover {
   background-color: rgba(31, 119, 250, 0.6039215686);
   box-shadow: 0 0 5px rgb(107, 107, 107);
 }
-body main .cards .filas .columns .tra {
-  border: 2px solid #07860d;
+body main .cards .filas .columns .card-2 {
+  border: 0.2rem groove rgba(7, 134, 13, 0.568627451);
 }
-body main .cards .filas .columns .tra:hover {
+body main .cards .filas .columns .card-2:hover {
   background-color: rgba(7, 134, 13, 0.4039215686);
   box-shadow: 0 0 5px rgb(107, 107, 107);
 }
-body main .cards .filas .columns .jr {
-  border: 2px solid #ffd000;
+body main .cards .filas .columns .card-3 {
+  border: 0.2rem groove rgba(255, 208, 0, 0.5215686275);
 }
-body main .cards .filas .columns .jr:hover {
+body main .cards .filas .columns .card-3:hover {
   background-color: rgba(255, 208, 0, 0.3490196078);
   box-shadow: 0 0 5px rgb(107, 107, 107);
 }
@@ -89,7 +90,7 @@ body main .containerForm form .inputs {
   gap: 1rem;
 }
 body main .containerForm form .alertBlue {
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 0.7rem;
 }
 body main .containerForm form .alertBlue p {
@@ -99,15 +100,20 @@ body main .containerForm form .alertBlue p {
 }
 body main .containerForm form .alertDanger {
   display: none;
+  color: #f1f1f1;
+  background-color: rgba(255, 49, 49, 0.712);
+  width: 49%;
   padding-top: 1rem;
+  margin-top: 1rem;
   padding-bottom: 0;
 }
 body main .containerForm form .visible {
-  display: block;
+  display: flex;
+  justify-content: space-between;
 }
 body main .containerForm form .buttons {
   padding: 0;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
 }
 body main .containerForm form .buttons .boton {
   font-size: 1.4rem;
@@ -139,7 +145,7 @@ body footer ul li a:hover {
 
 .oscuro {
   background: linear-gradient(25deg, #00010a, #000000, #000000, #1a1a1a);
-  animation: delay 0.5s normal linear;
+  animation: delay 1s normal linear;
 }
 .oscuro main {
   transition: all 2s;
@@ -183,22 +189,23 @@ body footer ul li a:hover {
 .oscuro main .cards {
   transition: all 2s;
 }
-.oscuro main .cards .filas .columns .card .card-body h5, .oscuro main .cards .filas .columns .card .card-body h6 {
+.oscuro main .cards .filas .columns .card .card-body h5,
+.oscuro main .cards .filas .columns .card .card-body h6 {
   color: #c5c5c5;
 }
 .oscuro main .cards .filas .columns .card .card-body p {
   color: #8d8d8d;
   transition: all 2s;
 }
-.oscuro main .cards .filas .columns .est {
+.oscuro main .cards .filas .columns .card-1 {
   background-color: rgba(31, 119, 250, 0.6039215686);
   transition: all 0.8s;
 }
-.oscuro main .cards .filas .columns .tra {
+.oscuro main .cards .filas .columns .card-2 {
   background-color: rgba(7, 134, 13, 0.4039215686);
   transition: all 2.1s;
 }
-.oscuro main .cards .filas .columns .jr {
+.oscuro main .cards .filas .columns .card-3 {
   background-color: rgba(255, 208, 0, 0.3490196078);
   transition: all 3.5s;
 }

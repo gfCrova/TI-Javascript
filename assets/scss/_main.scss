@@ -6,10 +6,12 @@ $botonHover: rgb(195, 250, 92);
 $bgColorFooter: linear-gradient(45deg, #112936, #1a3f53, #265c79);
 $bgColorOscuro: linear-gradient(25deg, #00010a, #000000, #000000, #1a1a1a);
 
+
 @mixin inputs {
     box-shadow: 0 0 10px #424242;
     transition: all 2s;
 }
+
 
 body {
     height: 100%;
@@ -37,7 +39,7 @@ body {
         transition: all 2s;
 
         #claroOscuro {
-            display: none; 
+            display: none;
             transition: all 4s;
         }
 
@@ -65,12 +67,16 @@ body {
 
                         .card-body {
                             color: black !important;
+
                             .card-title {
                                 padding: 5px;
                             }
-                            h5, h6 {
+
+                            h5,
+                            h6 {
                                 font-weight: bold;
                             }
+
                             p {
                                 color: rgb(94, 94, 94);
                                 padding-top: 5px;
@@ -78,24 +84,24 @@ body {
                         }
                     }
 
-                    .est {
-                        border: 2px solid #1f77fa;
+                    .card-1 {
+                        border: 0.2rem groove #1f77fa8e;
                         &:hover {
                         background-color: $card1;
                         box-shadow: 0 0 5px rgb(107, 107, 107);
                         }
                     }
 
-                    .tra {
-                        border: 2px solid #07860d;
+                    .card-2 {
+                        border: 0.2rem groove #07860d91;
                         &:hover {
                         background-color: $card2;
                         box-shadow: 0 0 5px rgb(107, 107, 107);
                         }
                     }
 
-                    .jr {
-                        border: 2px solid #ffd000;
+                    .card-3 {
+                        border: 0.2rem groove #ffd00085;
                         &:hover {
                         background-color: $card3;
                         box-shadow: 0 0 5px rgb(107, 107, 107);
@@ -132,7 +138,7 @@ body {
                 }
 
                 .alertBlue {
-                    margin-top: 2rem;
+                    margin-top: 1rem;
                     padding: 0.7rem;
 
                     p {
@@ -144,17 +150,22 @@ body {
 
                 .alertDanger {
                     display: none;
+                    color: #f1f1f1;
+                    background-color: rgba(255, 49, 49, 0.712);
+                    width: 49%;
                     padding-top: 1rem;
+                    margin-top: 1rem;
                     padding-bottom: 0;
                 }
 
                 .visible {
-                    display: block;
+                    display: flex;
+                    justify-content: space-between;
                 }
 
                 .buttons {
                     padding: 0;
-                    margin-top: 1rem;
+                    margin-top: 1.2rem;
 
                     .boton {
                         font-size: 1.4rem;
@@ -198,7 +209,7 @@ body {
 
 .oscuro {
     background: $bgColorOscuro;
-    animation: delay 0.5s normal linear;
+    animation: delay 1s normal linear;
 
     main {
         transition: all 2s;
@@ -249,11 +260,14 @@ body {
 
         .cards {
             transition: all 2s;
+
             .filas {
                 .columns {
                     .card {
                         .card-body {
-                            h5, h6 {
+
+                            h5,
+                            h6 {
                                 color: #c5c5c5;
                             }
 
@@ -264,17 +278,17 @@ body {
                         }
                     }
 
-                    .est {
+                    .card-1 {
                         background-color: $card1;
                         transition: all 0.8s;
                     }
-        
-                    .tra {
+
+                    .card-2 {
                         background-color: $card2;
                         transition: all 2.1s;
                     }
-        
-                    .jr {
+
+                    .card-3 {
                         background-color: $card3;
                         transition: all 3.5s;
                     }
@@ -289,21 +303,27 @@ body {
     0% {
         background: white;
     }
+
     15% {
         background: #575757;
     }
+
     25% {
         background: #464646;
     }
+
     50% {
         background: #2b2b2b;
     }
+
     75% {
         background: #202020;
     }
+
     85% {
         background: #181818;
     }
+
     100% {
         background: #0c0c0c;
     }

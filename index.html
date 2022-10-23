@@ -51,8 +51,8 @@
 
         <div class="container cards">
             <div class="row filas gap-2">
-                <div class="col-md columns">
-                    <div class="card est">
+                <div class="col-sm columns">
+                    <div class="card card-1">
                         <div class="card-body">
                             <h5 class="card-title">Estudiante</h5>
                             <p>Tienen un descuento</p>
@@ -61,8 +61,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md columns">
-                    <div class="card tra">
+                <div class="col-sm columns">
+                    <div class="card card-2">
                         <div class="card-body">
                             <h5 class="card-title">Trainee</h5>
                             <p>Tienen un descuento</p>
@@ -71,8 +71,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md columns">
-                    <div class="card jr">
+                <div class="col-sm columns">
+                    <div class="card card-3">
                         <div class="card-body">
                             <h5 class="card-title">Junior</h5>
                             <p>Tienen un descuento</p>
@@ -92,8 +92,8 @@
         <div class="container containerForm">
             <form action="#" class="form-group">
                 <div class="d-flex gap-3">
-                    <input type="text" id="name" placeholder="Nombre"  class="form-control fs-5" required>
-                    <input type="text" id="apellido" placeholder="Apellido"  class="form-control fs-5" required>
+                    <input type="text" id="name" placeholder="Nombre"  class="form-control fs-5">
+                    <input type="text" id="apellido" placeholder="Apellido"  class="form-control fs-5">
                 </div>
                 <div class="pt-4">
                     <input type="email" id="email" placeholder="Correo" class="form-control fs-5">
@@ -114,11 +114,11 @@
                     </div>
                 </div>
                 
+                <div class="alertDanger alert" id="error" role="alert">
+                    <p><i class="bi bi-x-lg"> Por favor introducir un número válido</i></p>
+                </div>
                 <div class="alertBlue alert alert-primary" role="alert">
                     <p id="txtPagar">Total a pagar: $</p>
-                </div>
-                <div class="alertDanger alert alert-danger" id="error" role="alert">
-                    <p><i class="bi bi-x-lg"> Por favor introducir un número válido</i></p>
                 </div>
                 
                 <div class="buttons d-flex gap-3">
