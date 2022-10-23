@@ -24,21 +24,26 @@ const resumenFunc = () => {
     let cantidad = document.getElementById('cantidad').value;
     let categoria = document.getElementById('categoria').value;
     let mostrarResultado = document.getElementById('txtPagar');
+    let error = document.getElementById('error');
     let ticket = 200;
     let total;
 
-    if (categoria == 'Estudiante') {
-        total = (ticket - (ticket * 80) / 100) * cantidad;
-        mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
-    } else if (categoria == 'Trainee') {
-        total = (ticket - (ticket * 50) / 100) * cantidad;
-        mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
-    } else if (categoria == 'Junior') {
-        total = (ticket - (ticket * 15) / 100) * cantidad;
-        mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
-    } else if (categoria == 'Ninguna') {
-        total = ticket * cantidad;
-        mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
+    if (cantidad > 0) {
+        if (categoria == 'Estudiante') {
+            total = (ticket - (ticket * 80) / 100) * cantidad;
+            mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
+        } else if (categoria == 'Trainee') {
+            total = (ticket - (ticket * 50) / 100) * cantidad;
+            mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
+        } else if (categoria == 'Junior') {
+            total = (ticket - (ticket * 15) / 100) * cantidad;
+            mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
+        } else if (categoria == 'Ninguna') {
+            total = ticket * cantidad;
+            mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
+        }
+    } else {
+        error.classList.toggle('visible');
     }
 };
 
