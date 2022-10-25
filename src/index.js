@@ -22,7 +22,6 @@ new TypeIt("#textTicket", {
 const resumenFunc = () => {
 
     let cantidad = document.getElementById('cantidad').value;
-    cantidad = parseInt(cantidad);
     let categoria = document.getElementById('categoria').value;
     let mostrarResultado = document.getElementById('txtPagar');
     let error = document.getElementById('error');
@@ -30,18 +29,23 @@ const resumenFunc = () => {
     let total;
 
     if (cantidad > 0 || !cantidad == Number) {
-        if (categoria == 'Estudiante') {
-            total = (ticket - (ticket * 80) / 100) * cantidad;
-            mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
-        } else if (categoria == 'Trainee') {
-            total = (ticket - (ticket * 50) / 100) * cantidad;
-            mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
-        } else if (categoria == 'Junior') {
-            total = (ticket - (ticket * 15) / 100) * cantidad;
-            mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
-        } else if (categoria == 'Ninguna') {
-            total = ticket * cantidad;
-            mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
+        switch (categoria) {
+            case 'Estudiante':
+                total = (ticket - (ticket * 80) / 100) * cantidad;
+                mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
+                break;
+            case 'Trainee':
+                total = (ticket - (ticket * 50) / 100) * cantidad;
+                mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
+                break;
+            case 'Junior':
+                total = (ticket - (ticket * 15) / 100) * cantidad;
+                mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
+                break;
+            case 'Ninguna':
+                total = ticket * cantidad;
+                mostrarResultado.innerHTML = `Total a pagar: $ ${total}`;
+                break;
         }
     } else {
         error.classList.toggle('visible');

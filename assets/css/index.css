@@ -1,6 +1,5 @@
 body {
   height: 100%;
-  transition: all 2s;
 }
 body .navbar .navbar-brand:hover {
   transform: scale(1.1);
@@ -12,7 +11,7 @@ body .navbar .nav-item:hover {
 }
 body main {
   margin-top: 6rem;
-  transition: all 2s;
+  transition: all 1s;
 }
 body main #claroOscuro {
   display: none;
@@ -31,6 +30,7 @@ body main #claroOscuro2:hover {
 }
 body main .cards {
   text-align: center;
+  transition: all 2s;
 }
 body main .cards .filas .columns .card {
   border-radius: 0;
@@ -51,25 +51,31 @@ body main .cards .filas .columns .card .card-body p {
   padding-top: 5px;
 }
 body main .cards .filas .columns .card-1 {
-  border: 0.2rem groove rgba(31, 119, 250, 0.5568627451);
+  transition: all 2s;
+  border: 0.2rem groove rgba(31, 119, 250, 0.5215686275);
 }
 body main .cards .filas .columns .card-1:hover {
-  background-color: rgba(31, 119, 250, 0.6039215686);
-  box-shadow: 0 0 5px rgb(107, 107, 107);
+  transform: rotateZ(-30deg);
+  box-shadow: 0 0 15px rgb(175, 175, 175);
+  transition: all 2s;
 }
 body main .cards .filas .columns .card-2 {
-  border: 0.2rem groove rgba(7, 134, 13, 0.568627451);
+  transition: all 2s;
+  border: 0.2rem groove rgba(8, 184, 125, 0.568627451);
 }
 body main .cards .filas .columns .card-2:hover {
-  background-color: rgba(7, 134, 13, 0.4039215686);
-  box-shadow: 0 0 5px rgb(107, 107, 107);
+  transform: rotateZ(-30deg);
+  box-shadow: 0 0 15px rgb(175, 175, 175);
+  transition: all 2s;
 }
 body main .cards .filas .columns .card-3 {
+  transition: all 2s;
   border: 0.2rem groove rgba(255, 208, 0, 0.5215686275);
 }
 body main .cards .filas .columns .card-3:hover {
-  background-color: rgba(255, 208, 0, 0.3490196078);
-  box-shadow: 0 0 5px rgb(107, 107, 107);
+  transform: rotateZ(-30deg);
+  box-shadow: 0 0 5px rgb(175, 175, 175);
+  transition: all 2s;
 }
 body main .titleForm {
   text-align: center;
@@ -199,11 +205,11 @@ body footer ul li a:hover {
 }
 .oscuro main .cards .filas .columns .card-1 {
   background-color: rgba(31, 119, 250, 0.6039215686);
-  transition: all 0.8s;
+  transition: all 1.8s;
 }
 .oscuro main .cards .filas .columns .card-2 {
-  background-color: rgba(7, 134, 13, 0.4039215686);
-  transition: all 2.1s;
+  background-color: rgba(8, 184, 125, 0.4588235294);
+  transition: all 2.8s;
 }
 .oscuro main .cards .filas .columns .card-3 {
   background-color: rgba(255, 208, 0, 0.3490196078);
@@ -234,6 +240,9 @@ body footer ul li a:hover {
   }
 }
 @media (max-width: 768px) {
+  main .cards .filas {
+    gap: 1rem;
+  }
   footer ul {
     display: flex;
     flex-direction: column;

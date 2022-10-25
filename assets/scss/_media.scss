@@ -1,6 +1,14 @@
 
 @media (max-width: 768px) {
 
+    main {
+        .cards {
+            .filas {
+                gap: 1rem;
+            }
+        }
+    }
+
     footer {
         ul {
         display: flex;

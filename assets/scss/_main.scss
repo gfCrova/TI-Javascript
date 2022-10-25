@@ -1,5 +1,5 @@
 $card1: #1f77fa9a;
-$card2: #07860d67;
+$card2: #08b87d75;
 $card3: #ffd00059;
 $boton: #95c842;
 $botonHover: rgb(195, 250, 92);
@@ -15,7 +15,6 @@ $bgColorOscuro: linear-gradient(25deg, #00010a, #000000, #000000, #1a1a1a);
 
 body {
     height: 100%;
-    transition: all 2s;
 
     .navbar {
 
@@ -36,7 +35,7 @@ body {
 
     main {
         margin-top: 6rem;
-        transition: all 2s;
+        transition: all 1s;
 
         #claroOscuro {
             display: none;
@@ -58,6 +57,7 @@ body {
 
         .cards {
             text-align: center;
+            transition: all 2s;
 
             .filas {
                 .columns {
@@ -85,27 +85,33 @@ body {
                     }
 
                     .card-1 {
-                        border: 0.2rem groove #1f77fa8e;
+                        transition: all 2s;
+                        border: 0.2rem groove #1f77fa85;
                         &:hover {
-                        background-color: $card1;
-                        box-shadow: 0 0 5px rgb(107, 107, 107);
-                        }
+                            transform: rotateZ(-30deg);
+                        box-shadow: 0 0 15px rgb(175, 175, 175);
+                        transition: all 2s;
+                    }
                     }
 
                     .card-2 {
-                        border: 0.2rem groove #07860d91;
+                        transition: all 2s;
+                        border: 0.2rem groove #08b87d91;
                         &:hover {
-                        background-color: $card2;
-                        box-shadow: 0 0 5px rgb(107, 107, 107);
-                        }
+                            transform: rotateZ(-30deg);
+                        box-shadow: 0 0 15px rgb(175, 175, 175);
+                        transition: all 2s;
+                    }
                     }
 
                     .card-3 {
+                        transition: all 2s;
                         border: 0.2rem groove #ffd00085;
                         &:hover {
-                        background-color: $card3;
-                        box-shadow: 0 0 5px rgb(107, 107, 107);
-                        }
+                            transform: rotateZ(-30deg);
+                        box-shadow: 0 0 5px rgb(175, 175, 175);
+                        transition: all 2s;
+                    }
                     }
                 }
             }
@@ -280,12 +286,12 @@ body {
 
                     .card-1 {
                         background-color: $card1;
-                        transition: all 0.8s;
+                        transition: all 1.8s;
                     }
 
                     .card-2 {
                         background-color: $card2;
-                        transition: all 2.1s;
+                        transition: all 2.8s;
                     }
 
                     .card-3 {
