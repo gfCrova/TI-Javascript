@@ -52,7 +52,7 @@ body main .cards .filas .columns .card .card-body p {
 }
 body main .cards .filas .columns .card-1 {
   transition: all 2s;
-  border: 0.2rem groove rgba(31, 119, 250, 0.5215686275);
+  border: 0.2rem groove rgba(31, 119, 250, 0.6039215686);
 }
 body main .cards .filas .columns .card-1:hover {
   transform: rotateZ(-30deg);
@@ -61,7 +61,7 @@ body main .cards .filas .columns .card-1:hover {
 }
 body main .cards .filas .columns .card-2 {
   transition: all 2s;
-  border: 0.2rem groove rgba(8, 184, 125, 0.568627451);
+  border: 0.2rem groove rgba(8, 184, 125, 0.4588235294);
 }
 body main .cards .filas .columns .card-2:hover {
   transform: rotateZ(-30deg);
@@ -70,11 +70,11 @@ body main .cards .filas .columns .card-2:hover {
 }
 body main .cards .filas .columns .card-3 {
   transition: all 2s;
-  border: 0.2rem groove rgba(255, 208, 0, 0.5215686275);
+  border: 0.2rem groove rgba(255, 208, 0, 0.3490196078);
 }
 body main .cards .filas .columns .card-3:hover {
   transform: rotateZ(-30deg);
-  box-shadow: 0 0 5px rgb(175, 175, 175);
+  box-shadow: 0 0 15px rgb(175, 175, 175);
   transition: all 2s;
 }
 body main .titleForm {

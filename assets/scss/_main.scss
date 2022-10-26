@@ -12,6 +12,16 @@ $bgColorOscuro: linear-gradient(25deg, #00010a, #000000, #000000, #1a1a1a);
     transition: all 2s;
 }
 
+@mixin cardsMx($theme: $card1) {
+    transition: all 2s;
+    border: 0.2rem groove $theme;
+
+    &:hover {
+        transform: rotateZ(-30deg);
+        box-shadow: 0 0 15px rgb(175, 175, 175);
+        transition: all 2s;
+}
+}
 
 body {
     height: 100%;
@@ -85,33 +95,15 @@ body {
                     }
 
                     .card-1 {
-                        transition: all 2s;
-                        border: 0.2rem groove #1f77fa85;
-                        &:hover {
-                            transform: rotateZ(-30deg);
-                        box-shadow: 0 0 15px rgb(175, 175, 175);
-                        transition: all 2s;
-                    }
+                        @include cardsMx($theme: $card1);
                     }
 
                     .card-2 {
-                        transition: all 2s;
-                        border: 0.2rem groove #08b87d91;
-                        &:hover {
-                            transform: rotateZ(-30deg);
-                        box-shadow: 0 0 15px rgb(175, 175, 175);
-                        transition: all 2s;
-                    }
+                        @include cardsMx($theme: $card2);
                     }
 
                     .card-3 {
-                        transition: all 2s;
-                        border: 0.2rem groove #ffd00085;
-                        &:hover {
-                            transform: rotateZ(-30deg);
-                        box-shadow: 0 0 5px rgb(175, 175, 175);
-                        transition: all 2s;
-                    }
+                        @include cardsMx($theme: $card3);
                     }
                 }
             }
