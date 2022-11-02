@@ -53,9 +53,6 @@ const resumenFunc = () => {
 };
 
 const borrarFunc = () => {
-    document.getElementById('name').value = ' ';
-    document.getElementById('apellido').value = ' ';
-    document.getElementById('email').value = ' ';
     cantidad.value = ' ';
     categoria.value = 'Ninguna';
     document.getElementById('txtPagar').innerHTML = 'Total a pagar: $';

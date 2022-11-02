@@ -5,7 +5,9 @@ $boton: #95c842;
 $botonHover: rgb(195, 250, 92);
 $bgColorFooter: linear-gradient(45deg, #112936, #1a3f53, #265c79);
 $bgColorOscuro: linear-gradient(25deg, #00010a, #000000, #000000, #1a1a1a);
-
+$seconds1: 2.1s;
+$seconds2: 2.8s;
+$seconds3: 3.6s;
 
 @mixin inputs {
     box-shadow: 0 0 10px #424242;
@@ -17,10 +19,14 @@ $bgColorOscuro: linear-gradient(25deg, #00010a, #000000, #000000, #1a1a1a);
     border: 0.2rem groove $theme;
 
     &:hover {
-        transform: rotateZ(-30deg);
-        box-shadow: 0 0 15px rgb(175, 175, 175);
+        transform:skew(0.512rad);
         transition: all 2s;
+        box-shadow: 0 0 15px rgb(175, 175, 175);
+    }
 }
+
+@mixin animCards ($theme: $seconds) {
+    animation: cardAnim1 $theme ease-in-out;
 }
 
 body {
@@ -95,14 +101,17 @@ body {
                     }
 
                     .card-1 {
+                        @include animCards($theme: $seconds1);
                         @include cardsMx($theme: $card1);
                     }
 
                     .card-2 {
+                        @include animCards($theme: $seconds2);
                         @include cardsMx($theme: $card2);
                     }
 
                     .card-3 {
+                        @include animCards($theme: $seconds3);
                         @include cardsMx($theme: $card3);
                     }
                 }
@@ -278,16 +287,19 @@ body {
 
                     .card-1 {
                         background-color: $card1;
+                        animation: cardAnim1 2s forwards ease-in-out;
                         transition: all 1.8s;
                     }
 
                     .card-2 {
                         background-color: $card2;
+                        animation: cardAnim1 3s forwards ease-in-out;
                         transition: all 2.8s;
                     }
 
                     .card-3 {
                         background-color: $card3;
+                        animation: cardAnim1 4s forwards ease-in-out;
                         transition: all 3.5s;
                     }
                 }
@@ -301,28 +313,36 @@ body {
     0% {
         background: white;
     }
-
     15% {
         background: #575757;
     }
-
     25% {
         background: #464646;
     }
-
     50% {
         background: #2b2b2b;
     }
-
     75% {
         background: #202020;
     }
-
     85% {
         background: #181818;
     }
-
     100% {
         background: #0c0c0c;
+    }
+}
+
+@keyframes cardAnim1 {
+    0% {
+        top: -200%;
+        transform: scale(0.1);
+    }    
+    50% {
+        top: 50%;
+        transform: scale(0.1);
+    }
+    100% {
+        top: 0%;
     }
 }
