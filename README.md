@@ -5,5 +5,5 @@
 <p> Replica del formulario de la imagen con funcionalidad en Javascript, donde al presionar el botón deberá mostrar el monto correspondiente a la cantidad a comprar con el descuento correspondiente dependiendo la categoría seleccionada, y con el otro botón borrar todos los campos</p>
 <div align="center">
 <br>
-<img src="https://github.com/gfCrova/TI-Javascript/blob/main/assets/img/img-ti.jpg?raw=true" alt="imagen-a-replicar"/>
+<img src="https://github.com/gfCrova/TI-Javascript/blob/main/assets/img/img-ti.jpg?raw=true" alt="imagen-a-replicar" width="600px"/>
 </div>
