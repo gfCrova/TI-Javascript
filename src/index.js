@@ -49,6 +49,9 @@ const resumenFunc = () => {
         }
     } else {
         error.classList.toggle('visible');
+        setTimeout(() => {
+            error.classList.remove('visible');
+        }, 2000)
     }
 };
 

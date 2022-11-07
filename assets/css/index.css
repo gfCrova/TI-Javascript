@@ -114,7 +114,6 @@ body main .containerForm form .alertDanger {
   display: none;
   color: #f1f1f1;
   background-color: rgba(255, 49, 49, 0.712);
-  width: 49%;
   padding-top: 1rem;
   margin-top: 1rem;
   padding-bottom: 0;
@@ -122,6 +121,8 @@ body main .containerForm form .alertDanger {
 body main .containerForm form .visible {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 1;
 }
 body main .containerForm form .buttons {
   padding: 0;

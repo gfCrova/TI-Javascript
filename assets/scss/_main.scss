@@ -160,7 +160,6 @@ body {
                     display: none;
                     color: #f1f1f1;
                     background-color: rgba(255, 49, 49, 0.712);
-                    width: 49%;
                     padding-top: 1rem;
                     margin-top: 1rem;
                     padding-bottom: 0;
@@ -169,6 +168,8 @@ body {
                 .visible {
                     display: flex;
                     justify-content: space-between;
+                    position: relative;
+                    z-index: 1;
                 }
 
                 .buttons {
