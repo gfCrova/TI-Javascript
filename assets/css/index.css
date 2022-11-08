@@ -52,7 +52,7 @@ body main .cards .filas .columns .card .card-body p {
 }
 body main .cards .filas .columns .card-1 {
   animation: cardAnim1 2s ease-in-out;
-  transition: all 2s;
+  transition: all 1s;
   border: 0.2rem groove rgba(31, 119, 250, 0.6039215686);
 }
 body main .cards .filas .columns .card-1:hover {
@@ -63,7 +63,7 @@ body main .cards .filas .columns .card-1:hover {
 }
 body main .cards .filas .columns .card-2 {
   animation: cardAnim1 2.8s ease-in-out;
-  transition: all 2s;
+  transition: all 1s;
   border: 0.2rem groove rgba(8, 184, 125, 0.4588235294);
 }
 body main .cards .filas .columns .card-2:hover {
@@ -74,7 +74,7 @@ body main .cards .filas .columns .card-2:hover {
 }
 body main .cards .filas .columns .card-3 {
   animation: cardAnim1 3.6s ease-in-out;
-  transition: all 2s;
+  transition: all 1s;
   border: 0.2rem groove rgba(255, 208, 0, 0.3490196078);
 }
 body main .cards .filas .columns .card-3:hover {
@@ -113,16 +113,17 @@ body main .containerForm form .alertBlue p {
 body main .containerForm form .alertDanger {
   display: none;
   color: #f1f1f1;
-  background-color: rgba(255, 49, 49, 0.712);
-  padding-top: 1rem;
-  margin-top: 1rem;
+  background-color: rgb(255, 49, 49);
   padding-bottom: 0;
 }
 body main .containerForm form .visible {
   display: flex;
   justify-content: space-between;
-  position: relative;
+  position: absolute;
   z-index: 1;
+  min-width: 32.7vw;
+  max-height: 2rem;
+  padding: 0.1rem 0.5rem;
 }
 body main .containerForm form .buttons {
   padding: 0;
