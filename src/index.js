@@ -21,11 +21,11 @@ new TypeIt("#textTicket", {
 
 const resumenFunc = () => {
 
-    let cantidad = document.getElementById('cantidad').value;
-    let categoria = document.getElementById('categoria').value;
-    let mostrarResultado = document.getElementById('txtPagar');
-    let error = document.getElementById('error');
-    let ticket = 200;
+    const cantidad = document.getElementById('cantidad').value;
+    const categoria = document.getElementById('categoria').value;
+    const mostrarResultado = document.getElementById('txtPagar');
+    const error = document.getElementById('error');
+    const ticket = 200;
     let total;
 
     if (cantidad > 0 || !cantidad == Number) {

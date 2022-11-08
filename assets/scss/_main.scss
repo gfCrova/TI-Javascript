@@ -19,9 +19,9 @@ $seconds3: 3.6s;
     border: 0.2rem groove $theme;
 
     &:hover {
-        transform: translate3d(6ch, 0.5in, 4em);
+        transform: translate3d(2.5ch, 0.3in, 4em);
         transition: all 1s;
-        box-shadow: -35px -25px 50px rgba(0, 0, 0, 0.664);
+        box-shadow: -15px -15px 30px rgba(0, 0, 0, 0.664);
         z-index: 1;
     }
 }
