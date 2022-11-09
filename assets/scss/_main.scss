@@ -1,4 +1,4 @@
-$card1: #1f77fa9a;
+$card1: #3a84f19a;
 $card2: #08b87d75;
 $card3: #ffd00059;
 $boton: #95c842;
@@ -51,21 +51,21 @@ body {
     }
 
     main {
-        margin-top: 6rem;
+        max-width: 900px !important;
+        margin-top: 5rem;
         transition: all 1s;
 
         #claroOscuro {
             display: none;
-            transition: all 4s;
+            transition: all 2s;
         }
 
         #claroOscuro2 {
             cursor: pointer;
             position: absolute;
-            top: 97px;
+            top: 8px;
             right: 33px;
-            transition: all 4s;
-            transition: all 2s;
+            transition: all 1s;
 
             &:hover {
                 transform: scale(1.2);
@@ -74,29 +74,33 @@ body {
 
         .cards {
             text-align: center;
-            transition: all 2s;
+            transition: all 1s;
 
             .filas {
                 .columns {
+                    padding: 0.2rem;
                     .card {
                         border-radius: 0;
-                        padding: 0 15px;
 
                         .card-body {
                             color: black !important;
+                            min-height: 220px;
 
                             .card-title {
                                 padding: 5px;
                             }
 
-                            h5,
+                            h5 {
+                                font-size: 18pt;
+                            }
+
                             h6 {
                                 font-weight: bold;
                             }
 
                             p {
                                 color: rgb(94, 94, 94);
-                                padding-top: 5px;
+                                padding-top: 20px;
                             }
                         }
                     }
@@ -121,16 +125,16 @@ body {
 
         .titleForm {
             text-align: center;
-            margin-top: 1.8rem;
+            margin-top: 1rem;
 
             p {
                 padding-bottom: 0;
                 margin-bottom: 0.5rem;
-                padding-top: 1rem;
+                padding-top: 0.5rem;
             }
 
             h1 {
-                padding-bottom: 2rem;
+                padding-bottom: 1.6rem;
             }
         }
 
@@ -158,6 +162,7 @@ body {
 
                 .alertDanger {
                     display: none;
+                    min-width: 22vw;
                     color: #f1f1f1;
                     background-color: rgb(255, 49, 49);
                     padding-bottom: 0;
@@ -168,7 +173,7 @@ body {
                     justify-content: space-between;
                     position: absolute;
                     z-index: 1;
-                    min-width: 32.7vw;
+                    min-width: 21.8vw;
                     max-height: 2rem;
                     padding: 0.1rem 0.5rem;
                 }
@@ -228,10 +233,9 @@ body {
             display: block;
             cursor: pointer;
             position: absolute;
-            top: 100px;
+            top: 10px;
             right: 30px;
-            transition: all 4s;
-            transition: all 2s;
+            transition: all 1s;
 
             &:hover {
                 transform: scale(1.2);
@@ -240,7 +244,7 @@ body {
 
         #claroOscuro2 {
             display: none;
-            transition: all 4s;
+            transition: all 2s;
         }
 
         .titleForm {

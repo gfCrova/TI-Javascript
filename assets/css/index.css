@@ -10,50 +10,55 @@ body .navbar .nav-item:hover {
   transition: 0.4s;
 }
 body main {
-  margin-top: 6rem;
+  max-width: 900px !important;
+  margin-top: 5rem;
   transition: all 1s;
 }
 body main #claroOscuro {
   display: none;
-  transition: all 4s;
+  transition: all 2s;
 }
 body main #claroOscuro2 {
   cursor: pointer;
   position: absolute;
-  top: 97px;
+  top: 8px;
   right: 33px;
-  transition: all 4s;
-  transition: all 2s;
+  transition: all 1s;
 }
 body main #claroOscuro2:hover {
   transform: scale(1.2);
 }
 body main .cards {
   text-align: center;
-  transition: all 2s;
+  transition: all 1s;
+}
+body main .cards .filas .columns {
+  padding: 0.2rem;
 }
 body main .cards .filas .columns .card {
   border-radius: 0;
-  padding: 0 15px;
 }
 body main .cards .filas .columns .card .card-body {
   color: black !important;
+  min-height: 220px;
 }
 body main .cards .filas .columns .card .card-body .card-title {
   padding: 5px;
 }
-body main .cards .filas .columns .card .card-body h5,
+body main .cards .filas .columns .card .card-body h5 {
+  font-size: 18pt;
+}
 body main .cards .filas .columns .card .card-body h6 {
   font-weight: bold;
 }
 body main .cards .filas .columns .card .card-body p {
   color: rgb(94, 94, 94);
-  padding-top: 5px;
+  padding-top: 20px;
 }
 body main .cards .filas .columns .card-1 {
   animation: cardAnim1 2s ease-in-out;
   transition: all 1s;
-  border: 0.2rem groove rgba(31, 119, 250, 0.6039215686);
+  border: 0.2rem groove rgba(58, 132, 241, 0.6039215686);
 }
 body main .cards .filas .columns .card-1:hover {
   transform: translate3d(2.5ch, 0.3in, 4em);
@@ -85,15 +90,15 @@ body main .cards .filas .columns .card-3:hover {
 }
 body main .titleForm {
   text-align: center;
-  margin-top: 1.8rem;
+  margin-top: 1rem;
 }
 body main .titleForm p {
   padding-bottom: 0;
   margin-bottom: 0.5rem;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 body main .titleForm h1 {
-  padding-bottom: 2rem;
+  padding-bottom: 1.6rem;
 }
 body main .containerForm form .inputs {
   margin-top: 1.1rem;
@@ -112,6 +117,7 @@ body main .containerForm form .alertBlue p {
 }
 body main .containerForm form .alertDanger {
   display: none;
+  min-width: 22vw;
   color: #f1f1f1;
   background-color: rgb(255, 49, 49);
   padding-bottom: 0;
@@ -121,7 +127,7 @@ body main .containerForm form .visible {
   justify-content: space-between;
   position: absolute;
   z-index: 1;
-  min-width: 32.7vw;
+  min-width: 21.8vw;
   max-height: 2rem;
   padding: 0.1rem 0.5rem;
 }
@@ -168,17 +174,16 @@ body footer ul li a:hover {
   display: block;
   cursor: pointer;
   position: absolute;
-  top: 100px;
+  top: 10px;
   right: 30px;
-  transition: all 4s;
-  transition: all 2s;
+  transition: all 1s;
 }
 .oscuro main #claroOscuro:hover {
   transform: scale(1.2);
 }
 .oscuro main #claroOscuro2 {
   display: none;
-  transition: all 4s;
+  transition: all 2s;
 }
 .oscuro main .titleForm {
   color: #f1eded;
@@ -212,7 +217,7 @@ body footer ul li a:hover {
   transition: all 2s;
 }
 .oscuro main .cards .filas .columns .card-1 {
-  background-color: rgba(31, 119, 250, 0.6039215686);
+  background-color: rgba(58, 132, 241, 0.6039215686);
   transition: all 1.8s;
 }
 .oscuro main .cards .filas .columns .card-2 {
@@ -262,7 +267,7 @@ body footer ul li a:hover {
 }
 @media (max-width: 768px) {
   main .cards .filas {
-    gap: 1rem;
+    gap: 0.5rem;
   }
   footer ul {
     display: flex;
